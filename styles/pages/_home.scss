@@ -1,0 +1,200 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+body {
+    background-color: #ffffff;
+    color: $cText;
+    &.index {
+        background-color: $cHomeBgColor;
+        color: $cHomeText;
+    }
+}
+.p-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    color: $cText;
+    padding: 1.6rem 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include mq(600) {
+        padding: 4rem 4.8rem 0;
+    }
+    &.index {
+        color: $cHomeText;
+    }
+    &__logo {
+        font-size: 36px;
+        line-height: 1;
+        font-family: "Kaushan Script", cursive;
+        margin-right: auto;
+        @include mq(600) {
+            font-size: 48px;
+        }
+    }
+    &__box {
+        display: none;
+        @include mq(600) {
+            display: block;
+        }
+    }
+    &__menu {
+        display: flex;
+        margin-right: 6.8rem;
+    }
+    &__item {
+        margin-left: 5rem;
+        letter-spacing: 0.26rem;
+        &.here {
+            & > a {
+                border-bottom: 1px solid;
+            }
+        }
+        @include mq(600) {
+            font-size: 2rem;
+        }
+        @include mq(960) {
+            font-size: 1.6rem;
+        }
+        & > a {
+            &.index:hover {
+                border-bottom: 1px solid #ff3683;
+                opacity: 1;
+            }
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+main {
+    padding-top: calc(36px + 1.6rem + 4rem);
+    min-height: calc(100vh - 60px);
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq(600) {
+        padding-top: calc(48px + 4rem + 7rem);
+    }
+}
+.hero {
+    position: relative;
+    &__title {
+        color: $cMainTitle;
+        font-size: 4rem;
+        font-weight: 300;
+        font-family: "Noto Serif", serif;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        position: relative;
+        &.index {
+            color: $cHomeText;
+        }
+        & .slideStep {
+            padding-left: 4rem;
+            @include mq(600) {
+                padding-left: 9rem;
+            }
+        }
+        & span {
+            display: inline-block;
+            border-bottom: 0.2rem solid #ff3683;
+            @include mq(600) {
+                border-bottom: 0.5rem solid #ff3683;
+            }
+        }
+        @include mq(600) {
+            font-size: 10rem;
+        }
+        @include mq(960) {
+            font-size: 8rem;
+        }
+    }
+    &__box {
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__text {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 1rem;
+        line-height: 1.5;
+        @include mq(600) {
+            font-size: 2rem;
+            line-height: 2;
+        }
+        @include mq(960) {
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+    }
+    &__description {
+        margin-top: 3.8rem;
+        width: 26rem;
+        @include mq(600) {
+            width: 50rem;
+            margin: 4rem auto 0;
+            position: relative;
+            left: -75px;
+        }
+        @include mq(960) {
+            width: 34rem;
+            margin: 2rem auto 0;
+            position: relative;
+            left: -55px;
+        }
+    }
+    &__subtitle {
+        font-size: 1.1rem;
+        line-height: 1.3636;
+        letter-spacing: 0.09em;
+        text-align: right;
+        @include mq(600) {
+            font-size: 2rem;
+            line-height: 1.5;
+            letter-spacing: 0.15em;
+        }
+        @include mq(960) {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            letter-spacing: 0.105em;
+        }
+    }
+    &__subtext {
+        color: #909ea8;
+        font-size: 1rem;
+        line-height: 1.5;
+        letter-spacing: 0.06em;
+        margin-top: 1.6rem;
+        @include mq(600) {
+            font-size: 1.05rem;
+            line-height: 1.8181;
+            letter-spacing: 0.12em;
+            margin-top: 1.4rem;
+            text-align: justify;
+        }
+    }
+}
+
+.footer {
+    font-size: 1rem;
+    height: 60px;
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-top: 1px solid $cText;
+    @include mq(600) {
+        font-size: 1.6rem;
+    }
+}

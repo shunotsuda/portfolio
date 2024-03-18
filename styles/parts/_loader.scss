@@ -1,0 +1,38 @@
+@use "../globals" as *;
+.loader {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    transition: opacity 2s;
+    &::after {
+      @include animation(
+        $name:loader,
+        $duration: 0.5s,
+        $timing-function: linear,
+        $iteration-count: infinite,
+      );
+      border: 1.5px solid ;
+      border-radius: 50%;
+      border-right: 1.5px solid rgba($cText, 0.2);
+      border-top: 1.5px solid rgba($cText, 0.2);
+      content: "";
+      height: 100px;
+      width: 100px;
+    }
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

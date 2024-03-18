@@ -1,0 +1,18 @@
+@use "../globals" as *;
+
+.animate-title {
+  opacity: 0;
+
+  & .char {
+    opacity: 0;
+  }
+  
+  &.inview {
+    opacity: 1;
+
+    & .char {
+      display: inline-block;
+    }
+  }
+
+}

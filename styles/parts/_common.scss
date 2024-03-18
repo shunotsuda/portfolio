@@ -1,0 +1,175 @@
+@use "../globals" as *;
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 2.6666666667vw;
+	overflow-x: hidden;
+    @include mq(600){
+        font-size: .78125vw;
+    }
+}
+body {
+    font-family: "Noto Serif", "Noto Serif JP", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 2;
+	color: $cText;
+	letter-spacing: .08em;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    &::before {
+        content: "";
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        background-color: rgba(55, 239, 245, 0.1);
+        position: absolute;
+        top: 40vw;
+        right: 10vw;
+        z-index: -1;
+        @include mq(600) {
+            width: 60vh;
+            height: 60vh;
+            top: 40vh;
+            right: 27vh;
+        }
+    }
+    &::after {
+        content: "";
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        background-color: rgba(255, 96, 202, 0.1);
+        position: absolute;
+        top: 30vw;
+        right: 10vw;
+        z-index: -1;
+        @include mq(600) {
+            width: 40vh;
+            height: 40vh;
+            top: 28vh;
+            right: 20vh;
+        }
+    }
+}
+#global-container {
+    animation: loaded-fadein 0.7s 0.5s 1 normal both;
+    position: relative;
+    height: 100%;
+}
+@keyframes loaded-fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+ol,
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.container {
+	margin: 0 auto;
+	max-width: 106.8rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+
+    @include mq(960) {
+        margin-bottom: 150px !important;
+    }
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+
+    @include mq(960) {
+        padding-bottom: 150px !important;
+    }
+}
+
+// font
+.font-sm {
+    font-size: 14px;
+
+    @include mq(960) {
+        font-size: 16px;
+    }
+}
+.font-md {
+    font-size: 17px;
+
+    @include mq(960) {
+        font-size: 19px;
+    }
+}
+.font-lr {
+    font-size: 17px;
+
+    @include mq(960) {
+        font-size: 23px;
+    }
+}
+.font-lg {
+    font-size: 25px;
+
+    @include mq(960) {
+        font-size: 36px;
+    }
+}
+
+.main-title {
+    @extend .font-lg;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: $nMainTitle;
+    display: block;
+}
+
+.sub-title {
+    @extend .font-sm;
+    @extend .mb-sm;
+    color: $nSubTitle;
+}
+
+
