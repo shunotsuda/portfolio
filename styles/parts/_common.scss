@@ -6,18 +6,18 @@
 html {
     height: 100%;
     font-size: 2.6666666667vw;
-	overflow-x: hidden;
-    @include mq(600){
-        font-size: .78125vw;
+    overflow-x: hidden;
+    @include mq(600) {
+        font-size: 0.78125vw;
     }
 }
 body {
     font-family: "Noto Serif", "Noto Serif JP", sans-serif;
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 2;
-	color: $cText;
-	letter-spacing: .08em;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2;
+    color: $cText;
+    letter-spacing: 0.08em;
     height: 100%;
     position: relative;
     z-index: -2;
@@ -76,7 +76,7 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+    margin: 0;
 }
 ol,
 ul,
@@ -97,11 +97,14 @@ img {
     vertical-align: bottom;
 }
 .container {
-	margin: 0 auto;
-	max-width: 106.8rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	width: 100%;
+    margin: 0 auto;
+    max-width: 106.8rem;
+    width: 100%;
+    padding: 0 4%;
+    @include mq(600) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .mb-sm {
@@ -171,5 +174,3 @@ img {
     @extend .mb-sm;
     color: $nSubTitle;
 }
-
-

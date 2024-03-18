@@ -264,9 +264,14 @@ img {
 .container {
   margin: 0 auto;
   max-width: 106.8rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   width: 100%;
+  padding: 0 4%;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .mb-sm, .sub-title {
