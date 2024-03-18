@@ -487,7 +487,7 @@ main {
   height: auto;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 2rem;
 }
 .hero__text {
   writing-mode: vertical-rl;
