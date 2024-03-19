@@ -611,9 +611,6 @@ main {
   padding-bottom: 4rem;
   text-align: center;
 }
-.contact__item p {
-  margin-bottom: 1rem;
-}
 .contact__item p + a:hover p {
   background: rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=style.css.map */
