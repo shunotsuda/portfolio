@@ -20,9 +20,12 @@
 
         <script src="scripts/libs/mobile-menu.js" defer></script>
         <script src="scripts/libs/loader.js" defer></script>
+        <script src="scripts/libs/scroll.js" defer></script>
+        <script src="scripts/libs/text-animation.js" defer></script>
         <script src="scripts/main.js" defer></script>
     </head>
     <body>
+        <div id="js-loader" class="loader"></div>
         <div id="global-container">
             <header class="p-header">
                 <a href="index.html" class="p-header__logo"> shun </a>
@@ -72,25 +75,45 @@
                     <div class="hero">
                         <p class="hero__sub">お問い合わせ</p>
                         <h1 class="hero__title">
-                            <p class="slideStep"><span>Contact</span></p>
+                            <p class="slideStep text-shadow">
+                                <span class="tween-animate-title">Contact</span>
+                            </p>
                         </h1>
                     </div>
-                    <div class="contact">
-                        <div class="contact__item">
-                            <p>Email-address :</p>
-                            <a href="mailto:"
-                                ><p><b>caffe1125@icloud.com</b></p></a
-                            >
-                        </div>
-                        <div class="contact__item">
-                            <p>GitHub-account :</p>
-                            <a href="https://github.com/shunotsuda"
-                                ><p><b>https://github.com/shunotsuda</b></p></a
-                            >
-                        </div>
-                        <div class="contact__item">
-                            <p>phone-number :</p>
-                            <a href="tel:"><p><b>08095857327</b></p></a>
+                    <div class="contact appear right">
+                        <div class="contact__container">
+                            <table class="contact__table">
+                                <tbody>
+                                    <tr class="item2">
+                                        <td>Email-address :</td>
+                                        <td>
+                                            <a href="mailto:"
+                                                >caffe1125@icloud.com</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>phone-number :</td>
+                                        <td>
+                                            <a href="tel:">080-9585-7327</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>GitHub-account :</td>
+                                        <td>
+                                            <a
+                                                href="https://github.com/shunotsuda"
+                                                >https://github.com/shunotsuda</a
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            <p class="contact__text item2">
+                                御連絡お待ちしております
+                            </p>
+                            <br />
                         </div>
                     </div>
                 </div>

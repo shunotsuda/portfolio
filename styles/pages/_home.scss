@@ -9,6 +9,18 @@ body {
         color: $cHomeText;
     }
 }
+main {
+    padding-top: calc(36px + 1.6rem + 4rem);
+    min-height: calc(100vh - 60px);
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq(600) {
+        padding-top: calc(48px + 4rem + 7rem);
+    }
+}
 .p-header {
     position: fixed;
     top: 0;
@@ -20,10 +32,12 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background: #ffffffd3;
     @include mq(600) {
         padding: 4rem 4.8rem 0;
     }
     &.index {
+        background: transparent;
         color: $cHomeText;
     }
     &__logo {
@@ -50,7 +64,7 @@ body {
         letter-spacing: 0.26rem;
         &.here {
             & > a {
-                border-bottom: 1px solid;
+                border-bottom: 1px solid #ff3683;
             }
         }
         @include mq(600) {
@@ -70,21 +84,12 @@ body {
         }
     }
 }
-main {
-    padding-top: calc(36px + 1.6rem + 4rem);
-    min-height: calc(100vh - 60px);
-    padding-bottom: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @include mq(600) {
-        padding-top: calc(48px + 4rem + 7rem);
-    }
-}
 .hero {
     position: relative;
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
+    @include mq(600) {
+        margin-bottom: 8rem;
+    }
     &__title {
         color: $cMainTitle;
         font-size: 4rem;
@@ -105,10 +110,7 @@ main {
         }
         & span {
             display: inline-block;
-            border-bottom: 0.2rem solid #ff3683;
-            @include mq(600) {
-                border-bottom: 0.5rem solid #ff3683;
-            }
+            border-bottom: 0.4rem solid #ff3683;
         }
         @include mq(600) {
             font-size: 10rem;
@@ -123,6 +125,19 @@ main {
         position: absolute;
         top: 0;
         right: 2rem;
+        animation: inview 1s ease 1s 1 both;
+        transition: all 0.5s;
+        @keyframes inview {
+            0%{
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
     }
     &__text {
         writing-mode: vertical-rl;
@@ -184,17 +199,19 @@ main {
             text-align: justify;
         }
     }
-    &__sub{
-        @include mq(600){
-            font-size:3rem ;
+    &__sub {
+        transform: translateY(-6px);
+        transition: all 0.8s;
+        opacity: 0;
+        font-size: 1.6rem;
+        @include mq(600) {
+            font-size: 3rem;
         }
-    }
-}
-.flex{
-    display: flex;
-    flex-direction: column;
-    @include mq(600){
-        flex-direction: row;
+        &.inview {
+            transition-delay: 2s;
+            opacity: 1;
+            transform: none;
+        }
     }
 }
 .footer {
@@ -209,4 +226,7 @@ main {
     @include mq(600) {
         font-size: 1.6rem;
     }
+}
+.text-shadow {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }

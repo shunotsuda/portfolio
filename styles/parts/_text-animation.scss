@@ -1,12 +1,12 @@
 @use "../globals" as *;
 
-.animate-title {
+.animate-title,
+.tween-animate-title {
   opacity: 0;
-
   & .char {
     opacity: 0;
   }
-  
+
   &.inview {
     opacity: 1;
 

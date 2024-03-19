@@ -69,6 +69,7 @@
 }
 .menu-open {
     & .p-header {
+        background: transparent;
         color: White;
         & .mobile-menu__btn {
             & > span {

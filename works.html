@@ -20,9 +20,12 @@
 
         <script src="scripts/libs/mobile-menu.js" defer></script>
         <script src="scripts/libs/loader.js" defer></script>
+        <script src="scripts/libs/scroll.js" defer></script>
+        <script src="scripts/libs/text-animation.js" defer></script>
         <script src="scripts/main.js" defer></script>
     </head>
     <body>
+        <div id="js-loader" class="loader"></div>
         <div id="global-container">
             <header class="p-header">
                 <a href="index.html" class="p-header__logo"> shun </a>
@@ -67,7 +70,55 @@
                     </li>
                 </ul>
             </nav>
-            <main></main>
+            <main>
+                <div class="container">
+                    <div class="hero">
+                        <p class="hero__sub">作品</p>
+                        <h1 class="hero__title ">
+                            <p class="slideStep text-shadow"><span class="tween-animate-title">Works</span></p>
+                        </h1>
+                    </div>
+                </div>
+                <div class="main-works">
+                    <div class="main-works__item">
+                        <div class="main-works__img">
+                            <img
+                                src="imges/スクリーンショット 2024-03-20 024005.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="main-works__text">
+                            <h2>Portfolioサイト</h2>
+                            <p>製作期間 ４日</p>
+                            <button><span>view</span><span>>></span></button>
+                        </div>
+                    </div>
+                    <div class="main-works__item">
+                        <div class="main-works__img">
+                            <img
+                                src="imges/スクリーンショット 2024-03-20 030557.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="main-works__text">
+                            <h2>Portfolioサイト</h2>
+                            <p>製作期間 ４日</p>
+                        </div>
+                    </div>
+                    <div class="main-works__item">
+                        <div class="main-works__img">
+                            <img
+                                src="imges/スクリーンショット 2024-03-20 030557.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="main-works__text">
+                            <h2>Portfolioサイト</h2>
+                            <p>製作期間 ４日</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
             <div class="footer">
                 <small class="footer__copyright">&copy;shun otsuda</small>
             </div>

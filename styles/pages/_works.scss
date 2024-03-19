@@ -1,2 +1,46 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
+
+.main-works {
+    margin: 0 auto;
+    padding-right: 4%;
+    padding-left: 4%;
+    @include mq(600) {
+        padding-right: 8%;
+        padding-left: 8%;
+    }
+    &__item {
+        background: rgba($cBgNav, 0.5);
+        display: flex;
+        flex-direction: column;
+        @include mq(600) {
+            margin: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            &:nth-child(2n + 1) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        padding: 2rem;
+        @include mq(600) {
+            width: 48%;
+            margin: 4rem;
+        }
+        & img {
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            display: inline-block;
+        }
+    }
+    &__text {
+        width: 100%;
+        text-align: center;
+        @include mq(600) {
+            width: 48%;
+        }
+    }
+}

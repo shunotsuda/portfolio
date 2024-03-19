@@ -2,22 +2,39 @@
 @use "../parts/common" as *;
 
 .contact {
-    margin-top: 6rem;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+    color: #27364a;
+    font-size: 1.2rem;
     @include mq(600) {
-        flex-direction: row;
-        justify-content: space-around;
+        font-size: 1.6rem;
     }
-    &__item {
-        padding-bottom: 4rem;
-        text-align: center;
-        & p {
-            & + a:hover {
-                & p {
+    &__container {
+        width: 100%;
+    }
+    &__table {
+        width: 100%;
+        @include mq(600) {
+            width: 70%;
+            margin: auto;
+        }
+        line-height: 1.5;
+        & td {
+            @include mq(600) {
+                padding-left: 50px;
+            }
+            &:nth-child(2n):hover {
+                & a {
                     background: rgba(0, 0, 0, 0.1);
                 }
             }
         }
+    }
+    &__text {
+        text-decoration: underline;
+        color: $cText;
+        text-align: end;
+        margin-top: 2rem;
     }
 }

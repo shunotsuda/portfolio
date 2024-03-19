@@ -20,9 +20,12 @@
 
         <script src="scripts/libs/mobile-menu.js" defer></script>
         <script src="scripts/libs/loader.js" defer></script>
+        <script src="scripts/libs/scroll.js" defer></script>
+        <script src="scripts/libs/text-animation.js" defer></script>
         <script src="scripts/main.js" defer></script>
     </head>
     <body>
+        <div id="js-loader" class="loader"></div>
         <div id="global-container">
             <header class="p-header">
                 <a href="index.html" class="p-header__logo"> shun </a>
@@ -67,7 +70,160 @@
                     </li>
                 </ul>
             </nav>
-            <main></main>
+            <main>
+                <div class="container">
+                    <div class="hero">
+                        <div>
+                            <p class="hero__sub">私について</p>
+                            <h1 class="hero__title ">
+                                <p class="slideStep text-shadow"><span class="tween-animate-title">Profile</span></p>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="profile appear right">
+                        <div class="profile__container">
+                            <table class="profile__table item2">
+                                <tbody>
+                                    <tr>
+                                        <td>名前</td>
+                                        <td>乙田 駿（Otsuda Shun）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>生年月日</td>
+                                        <td>1999/10/20 (24歳)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>所在地</td>
+                                        <td>千葉県在住</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最終学歴</td>
+                                        <td>製菓調理専門学校 卒業</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            <p class="sub-comment item2">
+                                ※詳細な履歴書は別途送付致します。
+                            </p>
+                            <br />
+                            <div class="profile__text appear down">
+                                <hr class="item2">
+                                <br>
+                                <p class="item2">
+                                    はじめまして。先日まで都内のイタリアンレストランで料理人として勤務しておりました。
+                                    新卒から現在まで5年間、飲食業界で経験を積んでまいりましたが、これからの人生について深く考えた結果、飲食業を離れることに決めました。
+                                    これまでお世話になった方々に恩返しをしていくことを目指し、新たな人生の道を歩んでいく所存です。
+                                    また、今後の新しい出会いにも感謝しながら、一つ一つ大切にしていけたらと思っております。
+                                    日々の学びと成長を大切にし、キャッチアップとスキルアップを怠らずに続けてまいります！
+                                    どうぞよろしくお願いいたします。
+                                </p>
+                                <br>
+                                <hr class="item2">
+                            </div>
+                        </div>
+                    </div>
+                    <article class="skills appear right">
+                        <div class="skills__title">
+                            <h2 class="tween-animate-title">My Skills</h2>
+                        </div>
+                        <div class="skills__text item2">
+                            業界未経験であり、まだスキルが洗練されているとは言いがたい状況ですが、<br />
+                            今後も自己成長を重ね、自信を持って★5つに達するよう励んで参ります。
+                        </div>
+                        <div class="skills__table">
+                            <table class="appear right">
+                                <tbody>
+                                    <tr class="item2">
+                                        <td>HTML5</td>
+                                        <td>★★★☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>CSS3</td>
+                                        <td>★★★☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>JavaScript</td>
+                                        <td>★★★☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Node.js</td>
+                                        <td>★★★☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>MongoDB</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Photoshop</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Illustrator</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>React</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>jQuery</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Tailwind CSS</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table  class="appear right">
+                                <tbody>
+                                    <tr class="item2">
+                                        <td>git</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Postman</td>
+                                        <td>★☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Bootstrap</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Java</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>MySQL</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>PHP</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Ruby</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>C</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>AWS</td>
+                                        <td>☆☆☆☆☆</td>
+                                    </tr>
+                                    <tr class="item2">
+                                        <td>Management</td>
+                                        <td>★★☆☆☆</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </main>
             <div class="footer">
                 <small class="footer__copyright">&copy;shun otsuda</small>
             </div>
