@@ -950,8 +950,12 @@ main {
     margin: auto;
   }
 }
+.contact__table td {
+  padding-bottom: 2rem;
+}
 @media screen and (min-width: 600px) {
   .contact__table td {
+    padding-bottom: 1rem;
     padding-left: 50px;
   }
 }
