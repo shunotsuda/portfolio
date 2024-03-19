@@ -441,6 +441,7 @@ main {
 
 .hero {
   position: relative;
+  margin-bottom: 4rem;
 }
 .hero__title {
   color: #27364a;
@@ -563,6 +564,21 @@ main {
     text-align: justify;
   }
 }
+@media screen and (min-width: 600px) {
+  .hero__sub {
+    font-size: 3rem;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .flex {
+    flex-direction: row;
+  }
+}
 
 .footer {
   font-size: 1rem;
@@ -578,4 +594,27 @@ main {
   .footer {
     font-size: 1.6rem;
   }
+}
+
+.contact {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .contact {
+    font-size: 1.6rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.contact__item {
+  padding-bottom: 2rem;
+}
+.contact__item > a {
+  text-align: center;
+}
+.contact__item > a:hover p {
+  background: rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=style.css.map */

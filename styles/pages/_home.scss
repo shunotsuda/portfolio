@@ -84,6 +84,7 @@ main {
 }
 .hero {
     position: relative;
+    margin-bottom:4rem;
     &__title {
         color: $cMainTitle;
         font-size: 4rem;
@@ -183,8 +184,19 @@ main {
             text-align: justify;
         }
     }
+    &__sub{
+        @include mq(600){
+            font-size:3rem ;
+        }
+    }
 }
-
+.flex{
+    display: flex;
+    flex-direction: column;
+    @include mq(600){
+        flex-direction: row;
+    }
+}
 .footer {
     font-size: 1rem;
     height: 60px;

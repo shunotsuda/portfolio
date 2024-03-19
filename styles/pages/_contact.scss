@@ -1,4 +1,25 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-
+.contact {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    @include mq(600) {
+        font-size: 1.6rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__item {
+        padding-bottom: 2rem;
+        & > a {
+            text-align: center;
+            &:hover {
+                & p {
+                    background: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}
