@@ -110,7 +110,7 @@ main {
         }
         & span {
             display: inline-block;
-            border-bottom: 0.4rem solid #ff3683;
+            border-bottom: 0.2rem solid #ff3683;
         }
         @include mq(600) {
             font-size: 10rem;

@@ -38,9 +38,22 @@
     }
     &__text {
         width: 100%;
+        padding: 2rem;
         text-align: center;
         @include mq(600) {
             width: 48%;
+            margin: 4rem;
         }
+    }
+    &__btn {
+        display: flex;
+        justify-content: end;
+    }
+}
+.view-btn {
+    width: 50%;
+    & a {
+        display: flex;
+        justify-content: space-between;
     }
 }

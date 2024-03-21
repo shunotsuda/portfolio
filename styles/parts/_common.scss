@@ -31,7 +31,9 @@ body {
         top: 40vw;
         right: 10vw;
         z-index: -1;
+        animation: fuwafuwa1 8s ease-in-out  infinite;
         @include mq(600) {
+            animation: fuwafuwa1-600 8s ease-in-out  infinite;
             width: 60vh;
             height: 60vh;
             top: 40vh;
@@ -48,12 +50,50 @@ body {
         top: 30vw;
         right: 10vw;
         z-index: -1;
+        animation: fuwafuwa2 6s ease-in-out 8;
         @include mq(600) {
+            animation: fuwafuwa2-600 6s ease-in-out 8;
             width: 40vh;
             height: 40vh;
             top: 28vh;
             right: 20vh;
         }
+    }
+}
+@keyframes fuwafuwa1 {
+    0%,
+    100% {
+        top: 40vw;
+    }
+    50% {
+        top: 50vw;
+    }
+}
+@keyframes fuwafuwa1-600 {
+    0%,
+    100% {
+        top: 40vh;
+    }
+    50% {
+        top: 50vh;
+    }
+}
+@keyframes fuwafuwa2 {
+    0%,
+    100% {
+        top: 30vw;
+    }
+    50% {
+        top: 40vw;
+    }
+}
+@keyframes fuwafuwa2-600 {
+    0%,
+    100% {
+        top: 28vh;
+    }
+    50% {
+        top: 38vh;
     }
 }
 #global-container {

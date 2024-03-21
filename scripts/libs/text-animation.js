@@ -33,7 +33,7 @@ class TextAnimation {
             duration: 1000,
             easing: "linear",
             fill: "both",
-            delay: i * 70 +1000,
+            delay: i * 70 +500,
           }
         );
       });
